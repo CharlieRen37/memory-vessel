@@ -44,45 +44,23 @@ color moon=#f1faee;
 //variables
 float time;
 
+
+
+//setup 
 void setup(){
-size(1000,500);
-
-//0
-//background(sky);
-//fill(sun);
-//circle(725,0,300);
-
-//1
-//background(night);
-//fill(moon);
-//circle(200,0,250);
-
-//2
-//background(sunsets);
-//fill(setsun);
-//circle(-25,400,300);
-hill();
+  size(1000,500);
+  background(255);
+  time=0;
 }
-////setup 
-//void setup(){
-//  size(1000,500);
-//  background(255);
-//  time=0;
-//}
 
 
 
-////draw function
-//void draw(){
-//hill();
-//rotate(radians(30));
-////flowers();
-//flower1(500,200);
-////for(int x=0; x<width; x=x+150){
-////  flower(x,250);
-////}
-////flower(400,250);
-//}
+//draw function
+void draw(){
+  detect();
+  hill();
+flowers();
+}
 
 
 
@@ -92,146 +70,195 @@ void hill(){
   ellipse(500,600,1200,400);
 }
 
-////flowers
-//void flower1(float x, float y){
-//  pushMatrix();
-//  translate(x,y);
-//  strokeWeight(1);
-//  stroke(greenOutline);
-//  fill(stem);
-//  rect(-3,-110,6,110);
-//  pedalmult1 ();
-//  popMatrix();
-//}
+//flowers
+void flower1(float x, float y){
+  pushMatrix();
+  translate(x,y);
+  strokeWeight(1);
+  stroke(greenOutline);
+  fill(stem);
+  rect(-3,-110,6,110);
+  pedalmult1 ();
+  popMatrix();
+}
 
-//void flower2(float x, float y){
-//  pushMatrix();
-//  translate(x,y);
-//  strokeWeight(1);
-//  stroke(greenOutline);
-//  fill(stem);
-//  rect(-3,-110,6,110);
-//  pedalmult2 ();
-//  popMatrix();
-//}
+void flower2(float x, float y){
+  pushMatrix();
+  translate(x,y);
+  strokeWeight(1);
+  stroke(greenOutline);
+  fill(stem);
+  rect(-3,-110,6,110);
+  pedalmult2 ();
+  popMatrix();
+}
 
-//void flower3(float x, float y){
-//  pushMatrix();
-//  translate(x,y);
-//  strokeWeight(1);
-//  stroke(greenOutline);
-//  fill(stem);
-//  rect(-3,-110,6,110);
-//  pedalmult3 ();
-//  popMatrix();
-//}
+void flower3(float x, float y){
+  pushMatrix();
+  translate(x,y);
+  strokeWeight(1);
+  stroke(greenOutline);
+  fill(stem);
+  rect(-3,-110,6,110);
+  pedalmult3 ();
+  popMatrix();
+}
 
-//void flower4(float x, float y){
-//  pushMatrix();
-//  translate(x,y);
-//  strokeWeight(1);
-//  stroke(greenOutline);
-//  fill(stem);
-//  rect(-3,-110,6,110);
-//  pedalmult4 ();
-//  popMatrix();
-//}
+void flower4(float x, float y){
+  pushMatrix();
+  translate(x,y);
+  strokeWeight(1);
+  stroke(greenOutline);
+  fill(stem);
+  rect(-3,-110,6,110);
+  pedalmult4 ();
+  popMatrix();
+}
 
-//void flowers(){
-//  flower1(400,410);
-////flower2  
-//flower2(500,400);
-//flower1(600,430);
-//flower1(300,445);
-//flower1(200,455);
-//flower1(100,480);
-//flower1(375,465);
-//flower1(275,490);
-//flower1(700,460);
-//flower1(825,455);
-//flower1(650,480);
-//flower1(775,485);
-//flower1(900,490);
-//flower1(400,410);
-//flower1(400,410);
-//}
-////pedals
-//void pedal(float a){
-//  pushMatrix();
-//  rotate(radians(a));
-//  //translate(0,-110);
-//  //ellipse(0,-137,22,44);
-//  ellipse(0,-27,22,44);
-//  popMatrix();
-//}
+void flowers(){
+  flower1(400,410);
+//flower2  
+flower2(500,400);
+flower1(600,430);
+flower2(300,445);
+flower3(200,455);
+flower1(100,480);
+flower2(375,465);
+flower3(275,490);
+flower1(700,460);
+flower2(825,455);
+flower3(650,480);
+flower1(775,485);
+flower2(900,490);
+}
+//pedals
+void pedal(float a){
+  pushMatrix();
+  rotate(radians(a));
+  //translate(0,-110);
+  //ellipse(0,-137,22,44);
+  ellipse(0,-27,22,44);
+  popMatrix();
+}
 
-////color variants
-//void pedalmult1 (){
-//  pushMatrix();
-//  translate(0,-110);
-//    fill(bluef);
-//  pedal(0);
-//pedal(60);
-//pedal(120);
-//pedal(180);
-//pedal(240);
-//pedal(300);
-//circle(0,0,20);
-//popMatrix();
-//}
+//color variants
+void pedalmult1 (){
+  pushMatrix();
+  translate(0,-110);
+    fill(bluef);
+  pedal(0);
+pedal(60);
+pedal(120);
+pedal(180);
+pedal(240);
+pedal(300);
+circle(0,0,20);
+popMatrix();
+}
 
 
-//void pedalmult2 (){
-//  pushMatrix();
-//  translate(0,-110);
-//    fill(redf);
-//  pedal(0);
-//pedal(60);
-//pedal(120);
-//pedal(180);
-//pedal(240);
-//pedal(300);
-//circle(0,0,20);
-//popMatrix();
-//}
+void pedalmult2 (){
+  pushMatrix();
+  translate(0,-110);
+    fill(redf);
+  pedal(0);
+pedal(60);
+pedal(120);
+pedal(180);
+pedal(240);
+pedal(300);
+circle(0,0,20);
+popMatrix();
+}
 
 
-//void pedalmult3 (){
-//  pushMatrix();
-//  translate(0,-110);
-//    fill(pinkf);
-//  pedal(0);
-//pedal(60);
-//pedal(120);
-//pedal(180);
-//pedal(240);
-//pedal(300);
-//circle(0,0,20);
-//popMatrix();
-//}
+void pedalmult3 (){
+  pushMatrix();
+  translate(0,-110);
+    fill(pinkf);
+  pedal(0);
+pedal(60);
+pedal(120);
+pedal(180);
+pedal(240);
+pedal(300);
+circle(0,0,20);
+popMatrix();
+}
 
 
-//void pedalmult4 (){
-//  pushMatrix();
-//  translate(0,-110);
-//    fill(yellowf);
-//  pedal(0);
-//pedal(60);
-//pedal(120);
-//pedal(180);
-//pedal(240);
-//pedal(300);
-//circle(0,0,20);
-//popMatrix();
-//}
+void pedalmult4 (){
+  pushMatrix();
+  translate(0,-110);
+    fill(yellowf);
+  pedal(0);
+pedal(60);
+pedal(120);
+pedal(180);
+pedal(240);
+pedal(300);
+circle(0,0,20);
+popMatrix();
+}
 
 
-//void mouseReleased(){
-//  time=time+1;
-//  if (time>2){
-//    time=0;
-//  }
-//}
+void mouseReleased(){
+  time=time+1;
+  if (time>2){
+    time=0;
+  }
+}
 
-//void detect(){
-//  if (time==0){
+void detect(){
+  if (time==0){
+    background(sky);
+    fill(sun);
+    circle(725,0,300);
+    butter(500,200,1,bluef);
+    butter(250,310,0.5,pinkf);
+    butter(800,280,1.2,redf);
+  }
+  if (time==1){
+    background(sunsets);
+    noStroke();
+    fill(setsun);
+    circle(-25,400,300);
+    birds(75,250,0.7);
+    birds(50,272,0.5);
+    birds(95,261,0.3);
+  }
+  if (time==2){
+    background(night);
+    fill(moon);
+    circle(200,0,250);
+  }
+}
+
+
+void birds(float x,float y,float s){
+  pushMatrix();
+  translate(x,y);
+    scale(s);
+    stroke(0);
+    strokeWeight(2);
+  noFill();
+  arc(30,0,60,30,PI,PI+HALF_PI+QUARTER_PI);
+  arc(-30,0,60,30,PI+QUARTER_PI,TWO_PI);
+  popMatrix();
+}
+
+
+void butter(float x, float y, float s,color c){
+  pushMatrix();
+  translate(x,y);
+  strokeWeight(5);
+  scale(s);
+  line(-4,8,7,-14);
+  noStroke();
+  fill(c);
+  circle(-10,-24,40);
+  circle(-16.5,-2,30);
+  stroke(0);
+  strokeWeight(1);
+  popMatrix();
+}
