@@ -1,4 +1,5 @@
 //person in flower garden/field looking at the sky ( may be sun set idk)  on a hill
+//*click mouse to change time of day
 
 //color white = #FFFFFF;
 //color grey  = #888888;
