@@ -26,7 +26,7 @@ color sun=#ffb703;
 color night=#001d3d;
 //color night=#000814;
 color moon=#f1faee;
-
+color grey=#C1C1C1;
 
 
 //color[] colors = {bluef,redf,yellowf,pinkf};
@@ -59,7 +59,9 @@ void setup(){
 void draw(){
   detect();
   hill();
+person(500,375,1.25);
 flowers();
+
 }
 
 
@@ -118,8 +120,8 @@ void flower4(float x, float y){
 void flowers(){
   flower1(400,410);
 //flower2  
-flower2(500,400);
-flower1(600,430);
+//flower2(500,400);
+//flower1(600,430);
 flower2(300,445);
 flower3(200,455);
 flower1(100,480);
@@ -259,6 +261,29 @@ void butter(float x, float y, float s,color c){
   circle(-10,-24,40);
   circle(-16.5,-2,30);
   stroke(0);
+  strokeWeight(1);
+  popMatrix();
+}
+
+//person
+void person(float x, float y, float s){
+  pushMatrix();
+  translate(x,y);
+  scale(s);
+  fill(grey);
+  strokeWeight(7);
+  line(-7,-14,-35,42);
+  line(-7,-14,32,42);
+  line(32,42,54,-60);
+  line(50,-44,78,42);
+  line(78,42,82,42);
+  line(-35,42,-39,42);
+  circle(60,-88,46);
+  strokeWeight(3);
+  fill(0);
+  circle(52.5,-94,2);
+  noFill();
+  arc(44,-88,30,30,0,HALF_PI);
   strokeWeight(1);
   popMatrix();
 }
